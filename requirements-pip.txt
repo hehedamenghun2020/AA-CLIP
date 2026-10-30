@@ -1,0 +1,10 @@
+# Windows: PyPI 上的 torch 为 CPU 版；CUDA 12.1 版需单独安装：
+# pip install torch==2.3.1+cu121 torchvision==0.18.1+cu121 -f https://mirrors.aliyun.com/pytorch-wheels/cu121/ --index-url https://mirrors.aliyun.com/pypi/simple/
+einops==0.7.0
+ftfy==6.2.0
+kornia==0.6.9
+opencv-python==4.9.0.80
+tiktoken==0.7.0
+timm==0.6.12
+torch==2.3.1
+torchvision==0.18.1
