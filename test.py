@@ -132,7 +132,6 @@ def main():
     logger = logging.getLogger(__name__)
     logging.basicConfig(
         filename=os.path.join(args.save_path, "test.log"),
-        encoding="utf-8",
         level=logging.INFO,
     )
     logger.info("args: %s", vars(args))

@@ -222,7 +222,6 @@ def main():
     logger = logging.getLogger(__name__)
     logging.basicConfig(
         filename=os.path.join(args.save_path, "train.log"),
-        encoding="utf-8",
         level=logging.INFO,
     )
     logger.info("args: %s", vars(args))
@@ -250,6 +249,8 @@ def main():
         require_pretrained=True,
     )
     clip_model.eval()
+    for p in clip_model.parameters():
+        p.requires_grad_(False)
     model = AdaptedCLIP(
         clip_model=clip_model,
         text_adapt_weight=args.text_adapt_weight,

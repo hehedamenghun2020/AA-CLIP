@@ -1,4 +1,6 @@
-BASE_PATH = "/data/wenxinma"
+import os
+
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_PATH = {
     "Brain": f"{BASE_PATH}/data/MedAD/Brain_AD",
     "Liver": f"{BASE_PATH}/data/MedAD/Liver_AD",
